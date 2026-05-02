@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Projects page</title>
+</head>
+<body>
+ <header class="site-header" id="site-header" role="banner">
+  <div class="container header-inner">
+    <!-- Brand -->
+    <button class="brand brand-panel-trigger" id="brand-panel-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="brand-panel">
+      <span class="logo-mark"><img src="./assets/logo.jpg" alt="logo" class="logo"></span>
+      <span class="brand-text"><strong>RS</strong> Constructions</span>
+      <img src="./assets/arrow-down.png" class="arrow-down">
+    </button>
+    <!-- CENTER NAV (Desktop Only) -->
+    <nav class="nav-center" role="navigation" aria-label="Primary">
+      <ul class="nav-links">
+        <li><a class="nav-link active" href="./home.html">Home</a></li>
+        <li><a class="nav-link" href="./about.html">About</a></li>
+        <li>
+          <a class="nav-link has-panel" href="./services.html" data-panel="services-panel">Services <span class="chev">▾</span></a>
+        </li>          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+        <li><a class="nav-link" href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Right Side Buttons -->
+  <div class="nav-right">
+      <a class="header-cta" href="./contact.html" id="header-cta">GET IN TOUCH</a>
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+       <li>
+        <a class="mobile-link has-panel" href="./services.html" data-panel="services-panel">Services</a>
+      </li>
+      <li><a href="./projects.html">Projects</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a class="mobile-cta" href="./contact.html" style="background-color:#c9ff3a ;">GET IN TOUCH</a></li>
+    </ul>
+  </div>
+</header>
+<div id="panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+  <div id="services-panel" class="panel services-panel" role="dialog" aria-modal="true" aria-labelledby="services-panel-title">
+    <button class="panel-close" aria-label="Close services panel">✕</button>
+    <div class="panel-inner container">
+      <small class="pre">What we offer</small>
+      <h2 id="services-panel-title">Our Services</h2>
+      <p class="panel-lead">We deliver full-cycle construction services — from planning and design to handover. Pick a service to read a short summary.</p>
+      <div class="services-cards">
+        <article class="service-card-panel">
+          <div class="card-icon">🏗️</div>
+          <h3>Contract</h3>
+          <p>We build custom homes that blend local materials with modern engineering for lasting comfort and beauty.<p>
+          <a class="card-link" href="./contract.html">Read more →</a>
+        </article>
+        <article class="service-card-panel">
+          <div class="card-icon">🏢</div>
+          <h3>Consulting</h3>
+          <p>Office, retail and mixed-use developments delivered on schedule and with strict quality control.</p>
+          <a class="card-link" href="./consulting.html">Read more →</a>
+        </article>
+        <article class="service-card-panel">
+          <div class="card-icon">🛠️</div>
+          <h3>Promoters</h3>
+          <p>Upgrades, interiors and fit-outs that maximize space and modernize buildings while respecting budgets.</p>
+          <a class="card-link" href="./promoters.html">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BRAND QUICK PANEL OVERLAY -->
+<div id="brand-panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+  <div id="brand-panel" class="panel brand-panel" role="dialog" aria-modal="true" aria-labelledby="brand-panel-title">
+    <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+    <div class="panel-inner container">
+      <h2 id="brand-panel-title">Choose a site / option</h2>
+      <p class="panel-lead">Select an option to view that site or summary. Background contents are dimmed while this panel is open.</p>
+      <div class="brand-options">
+        <article class="brand-card">
+          <img src="/mnt/data/d3d758de-f413-4e3c-ac67-275b7f8cd61d.png" alt="Vangalamman Decors" class="brand-card-img">
+          <h3>Vangalamman Decors</h3>
+          <p>Decoration & events — traditional and modern decor solutions.</p>
+<a class="brand-card-cta" href="../vangalamman_decors/index.html" target="_blank" rel="noopener">Visit →</a>        </article>
+        <article class="brand-card">
+          <img src="./assets/logo.jpg" alt="RS Constructions" class="brand-card-img">
+          <h3>RS Constructions</h3>
+          <p>This website — construction, projects, services and contact.</p>
+          <a class="brand-card-cta" href="./home.html">Visit →</a>
+        </article>
+        <article class="brand-card">
+          <img src="./assets/project-1.jpg" alt="Another Option" class="brand-card-img">
+          <h3>Another Option</h3>
+          <p>Third option — add your summary here.</p>
+          <a class="brand-card-cta" href="../vangalamman-upvs-solutions/home.html">Visit →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+<section class="hero" id="hero" aria-label="Hero">
+      <div class="hero-bg-4" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-inner container">
+        <div class="badge">Projects</div>
+        <h1 class="hero-title">From Vision to Ready</h1>
+        <p class="hero-sub">
+            Explore a showcase of the spaces we’ve proudly built — and a preview of what’s coming next. Every build tells a story of trust, quality, and purpose.      
+        </p>
+      </div>
+</section>
+<section id="projects-section" class="projects-section">
+  <div class="container">
+    <div class="projects-head" style="text-align:center; margin-bottom:28px;">
+      <small class="pre">Built to last</small>
+      <h2>Where Ideas Become<br/>Landmarks</h2>
+      <div class="projects-filters" role="tablist" aria-label="Project filters" style="margin-top:18px;">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed Projects</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming Projects</button>
+      </div>
+    </div>
+    <div class="projects-grid" id="projects-grid">
+      <!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-1.jpg" alt="Ganapathy Apartment, Gandhi Nagar">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Ganapathy Apartment</h3>
+    <p class="project-desc">Residential apartment project completed with structural work, interior finishing, and electrical installation.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>On-time completion</li>
+      <li>High-quality materials</li>
+      <li>Full residential turnkey work</li>
+    </ul>
+    <div class="project-meta">Location: Gandhi Nagar</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-2.jpg" alt="Vasavi Electricals, Karur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Vasavi Electricals</h3>
+    <p class="project-desc">Commercial building constructed for Vasavi Electricals featuring industrial-grade flooring, electrical layout, and storage integration.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Commercial-grade construction</li>
+      <li>Strong foundation & load handling</li>
+    </ul>
+    <div class="project-meta">Location: Karur</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-3.jpg" alt="Ammasiappan Thirumana Mandapam">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Ammasiappan Thirumana Mandapam</h3>
+    <p class="project-desc">Marriage hall construction with spacious hall, dining area, rooms, and infrastructure for large gatherings.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Large-capacity hall</li>
+      <li>Stage, rooms, dining & parking</li>
+    </ul>
+    <div class="project-meta">Location: Neyyal</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-4.jpg" alt="Ganapathy Complex, Karur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Ganapathy Complex</h3>
+    <p class="project-desc">Commercial complex with multiple rental units and complete finishing work.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Multiple shop units</li>
+      <li>Strong commercial structure</li>
+      <li>Fully finished interiors</li>
+    </ul>
+    <div class="project-meta">Location: Karur</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-5.jpg" alt="Sivaari Avenue, Karur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Sivaari Avenue</h3>
+    <p class="project-desc">Premium residential avenue project with modern housing layout, road planning, and drainage infrastructure.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Residential development</li>
+      <li>Modern planning</li>
+      <li>High-quality construction</li>
+    </ul>
+    <div class="project-meta">Location: Karur</div>
+  </div>
+</article>
+<!--project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-6.jpg" alt="Paint Factory, Mega Industrial Estate">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Paint Factory</h3>
+    <p class="project-desc">Industrial building constructed for a paint manufacturing facility with load-bearing flooring and ventilation systems.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Industrial-grade build</li>
+      <li>Heavy machinery support</li>
+      <li>Ventilation & safety standards</li>
+    </ul>
+    <div class="project-meta">Location: Mega Industrial Estate</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-7.jpg" alt="Madhan House, Karur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Madhan House</h3>
+    <p class="project-desc">A private residential home built with custom layouts, premium materials, and modern finishing tailored to the owner's lifestyle.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Custom floor plan</li>
+      <li>Modern interiors</li>
+      <li>Quality construction</li>
+    </ul>
+    <div class="project-meta">Location: Karur</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-8.jpg" alt="KKC Balasubramaniam, Kottur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">KKC Balasubramaniam</h3>
+    <p class="project-desc">Residential/office project constructed with strong structural planning, quality plastering, and detailed interior finishing.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Strong foundation</li>
+      <li>Detailed finishing</li>
+      <li>Well-planned design</li>
+    </ul>
+    <div class="project-meta">Location: Kottur</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-9.jpg" alt="Mr. Vivek – Pothavurpatty Nagar">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Mr. Vivek – Pothavurpatty Nagar</h3>
+    <p class="project-desc">A fully customized house constructed with RCC structure, modern tiling, and interior design suited for family comfort.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>RCC structure</li>
+      <li>Modern interiors</li>
+      <li>Quality finish</li>
+    </ul>
+    <div class="project-meta">Location: Pothavurpatty Nagar</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-10.jpg" alt="Mr. Manicam Residence">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Mr. Manicam</h3>
+    <p class="project-desc">A residential house designed with practical space planning, natural ventilation, and durable construction materials.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Practical layout</li>
+      <li>Natural lighting</li>
+      <li>Durable construction</li>
+    </ul>
+    <div class="project-meta">Location: Private Residence</div>
+  </div>
+</article>
+<!-- project item -->
+<article class="project-card" data-type="completed">
+  <div class="project-thumb">
+    <img src="./assets/project-11.jpg" alt="Jothi Colour, Sukkaliyur">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Jothi Colour</h3>
+    <p class="project-desc">A manufacturing/warehouse building built for paint and colouring materials with strong flooring and storage planning.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Warehouse-ready structure</li>
+      <li>Strong industrial flooring</li>
+      <li>Spacious storage planning</li>
+    </ul>
+    <div class="project-meta">Location: Sukkaliyur</div>
+  </div>
+</article>
+<!-- project item (Upcoming) -->
+<article class="project-card" data-type="upcoming">
+  <div class="project-thumb">
+    <img src="./assets/project-12.jpg" alt="Admin Building (Twin Building)">
+  </div>
+  <div class="project-body">
+    <h3 class="project-title">Admin Building</h3>
+    <p class="project-desc">An upcoming twin-block administrative building project designed for institutional use with long-term durability and smart planning.</p>
+    <h4 class="sub">Highlights</h4>
+    <ul class="project-highlights">
+      <li>Twin-block structure</li>
+      <li>Institutional planning</li>
+    </ul>
+    <div class="project-meta">Location: Twin building</div>
+  </div>
+</article>
+</div>
+</div>
+</section>
+<!-- CTA BANNER -->
+<section class="footer-cta" aria-labelledby="footer-cta-title">
+  <div class="container footer-cta-inner">
+    <div class="cta-left">
+      <small>READY TO START YOUR PROJECT?</small>
+      <h2 id="footer-cta-title">From Idea to Reality,<br>Let's Begin</h2>
+    </div>
+    <div class="cta-right">
+      <p class="cta-note">Your home should be more than a place to live — it should reflect your lifestyle, your values, and your dreams.</p>
+      <a href="./contact.html" class="cta-button">LET'S TALK</a>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <!-- Brand & short -->
+    <div class="footer-col brand-col">
+     <h3 style="color: red;">RS Construction</h3>
+      <p>At RS, we are dedicated to delivering exceptional construction services that stand the test of time.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook" class="social">🔗</a>
+        <a href="#" aria-label="Instagram" class="social">🔗</a>
+        <a href="#" aria-label="YouTube" class="social">🔗</a>
+        <a href="#" aria-label="X" class="social">🔗</a>
+      </div>
+    </div>
+    <!-- Company links -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Support links -->
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul class="footer-links">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Testimonials</a></li>
+      </ul>
+    </div>
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="contact-list">
+        <li><strong>Call us</strong><br><a href="tel:+918004560000">+91 80045 60000</a></li>
+        <li><strong>Send Email</strong><br><a href="mailto:info@rsconstructions.com">info@rsconstructions.com</a></li>
+        <li><strong>Address</strong><br>123 Main St, Your City</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div class="copyright">© <span id="year-foot"></span> RS Constructions</div>
+    <div class="policy-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Condition</a>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="./script.js"></script>
+</body>
+</html>

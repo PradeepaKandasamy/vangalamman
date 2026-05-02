@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Vangalamman Decors</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const brandTrigger = document.getElementById("brandTrigger");
+            const overlay = document.getElementById("brand-panel-overlay");
+            const closeBtn = document.getElementById("brand-panel-close");
+
+            if (!brandTrigger || !overlay) return;
+
+            // OPEN PANEL
+            function openPanel() {
+                overlay.removeAttribute("hidden");
+                document.body.style.overflow = "hidden";
+            }
+
+            // CLOSE PANEL
+            function closePanel() {
+                overlay.setAttribute("hidden", true);
+                document.body.style.overflow = "";
+            }
+
+            // Click logo/title/arrow
+            brandTrigger.addEventListener("click", openPanel);
+
+            // Close button
+            closeBtn.addEventListener("click", closePanel);
+
+            // Click outside panel
+            overlay.addEventListener("click", function (e) {
+                if (e.target === overlay) {
+                    closePanel();
+                }
+            });
+
+            // ESC key close
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closePanel();
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar -->
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-wrapper" id="brandTrigger">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo">
+                    <h1 class="logo">Vangalamman Decors</h1>
+                    <button class="dropdown-toggle" id="dropdownToggle" aria-label="Toggle dropdown menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 7L10 10L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="get-in-touch.html" class="nav-link cta-link">Get In Touch</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div id="brand-panel-overlay" class="panel-overlay" hidden>
+
+        <div id="brand-panel" class="panel" role="dialog" aria-modal="true">
+
+            <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+
+            <div class="panel-inner container">
+                <h2>Choose a site / option</h2>
+                <p>Select an option to view that site or summary.</p>
+
+                <div class="brand-options">
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors"
+                                class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman Decors</h3>
+                        <p>Decoration & events solutions.</p>
+                        <a href="../vangalamman_decors/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/rsconstruction.jpg" alt="RS Constructions" class="brand-card-img">
+                        </div>
+                        <h3>RS Constructions</h3>
+                        <p>Construction projects.</p>
+                        <a href="../rsconstruction/home.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/upvsc.png" alt="UPVC Solutions" class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman UPVC Solutions</h3>
+                        <p>UPVC doors & windows.</p>
+                        <a href="../vangalamman_upvsc/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Page Header / Banner -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-title">Our Projects</h1>
+            <p class="page-subtitle">Explore our portfolio of exceptional design work</p>
+        </div>
+    </section>
+
+
+    <!-- Section 3: Projects Grid / Card Layout -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid-main" id="projectsGrid">
+
+                <div class="project-card-grid" data-id="1">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-01.jpg" alt="Elegant Residence - Velayuthapuram">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential Interior</span>
+                        <h3 class="project-title">Elegant Residence - Velayuthapuram</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="2">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-01.jpg" alt="Modern Living Space">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Design</span>
+                        <h3 class="project-title">Modern Living Space</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="3">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-07.jpg" alt="Premium Home - Palladam">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential Interior</span>
+                        <h3 class="project-title">Premium Home - Palladam</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="4">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-07.jpg" alt="Luxury Interior - Gandhi Gramam">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Design</span>
+                        <h3 class="project-title">Luxury Interior - Gandhi Gramam</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="5">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-13.jpg" alt="Contemporary Living Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Design</span>
+                        <h3 class="project-title">Contemporary Living Project</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="6">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-11.jpg" alt="Elegant Couple Residence">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential Interior</span>
+                        <h3 class="project-title">Elegant Couple Residence</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="7">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-19.jpg" alt="Minimalist Living Space">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Design</span>
+                        <h3 class="project-title">Minimalist Living Space</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="8">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-04.jpg" alt="Family Interior Design">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential Interior</span>
+                        <h3 class="project-title">Family Interior Design</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="9">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-25.jpg" alt="Custom Library Interior">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Custom Interior</span>
+                        <h3 class="project-title">Custom Library Interior</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="10">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-05.jpg" alt="Modern Home - Thennilai">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential Interior</span>
+                        <h3 class="project-title">Modern Home - Thennilai</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="11">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-02.jpg" alt="Cozy Bedroom Interior">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bedroom Interior</span>
+                        <h3 class="project-title">Cozy Bedroom Interior</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="12">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-08.jpg" alt="Premium Kitchen Design">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Kitchen Interior</span>
+                        <h3 class="project-title">Premium Kitchen Design</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="13">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-15.jpg" alt="Luxury Living Experience">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Interior Design</span>
+                        <h3 class="project-title">Luxury Living Experience</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="14">
+                    <div class="project-image">
+                        <img src="assets/kitchen/kitchen-project-10.jpg" alt="Modern Kitchen - Kodumudi">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Kitchen Interior</span>
+                        <h3 class="project-title">Modern Kitchen - Kodumudi</h3>
+                    </div>
+                </div>
+
+                <div class="project-card-grid" data-id="15">
+                    <div class="project-image">
+                        <img src="assets/hall/hall-project-20.jpg" alt="Elegant Bedroom - Dindugal">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bedroom Interior</span>
+                        <h3 class="project-title">Elegant Bedroom - Dindugal</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeModal">✕</button>
+            <div class="modal-content">
+                <div class="modal-gallery" id="modalGallery">
+                    <!-- Dynamic Images -->
+                </div>
+                <div class="modal-details" id="modalDetails">
+                    <!-- Dynamic Details -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section 5: Call-to-Action / Inquiry Section -->
+    <section class="project-inquiry">
+        <div class="container">
+            <div class="inquiry-content">
+                <h2 class="inquiry-title">Have a Project in Mind?</h2>
+                <p class="inquiry-description">Let's collaborate to create something exceptional. Our team is ready to
+                    bring your vision to life with creativity and precision.</p>
+                <div class="inquiry-buttons">
+                    <a href="get-in-touch.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="contact.html" class="btn btn-outline">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo" class="footer-logo">
+                    <h3>Vangalamman Decors</h3>
+                    <p>Transforming spaces with elegance and precision</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Design Street<br>Chennai, Tamil Nadu 600001</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vangalamman Decors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
