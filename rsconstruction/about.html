@@ -1,376 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>About-page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>About-page</title>
 </head>
+
 <body>
- <header class="site-header" id="site-header" role="banner">
-  <div class="container header-inner">
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
 
-    <!-- Brand -->
-   <!-- Brand (updated to be a button trigger for quick-panel) -->
-    <button class="brand brand-panel-trigger" id="brand-panel-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="brand-panel">
-      <span class="logo-mark"><img src="./assets/logo.jpg" alt="logo" class="logo"></span>
-      <span class="brand-text"><strong>RS</strong> Constructions</span>
-      <img src="./assets/arrow-down.png" class="arrow-down">
-    </button>
-
-    <!-- CENTER NAV (Desktop Only) -->
-    <nav class="nav-center" role="navigation" aria-label="Primary">
-      <ul class="nav-links">
-        <li><a class="nav-link active" href="./home.html">Home</a></li>
-        <li><a class="nav-link" href="./about.html">About</a></li>
-        <li>
-          <a class="nav-link has-panel" href="./services.html" data-panel="services-panel">Services <span class="chev">▾</span></a>
-        </li>          <li><a class="nav-link" href="./projects.html">Projects</a></li>
-        <li><a class="nav-link" href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Right Side Buttons -->
-    <div class="nav-right">
-      <a class="header-cta" href="./contact.html" id="header-cta">GET IN TOUCH</a>
-
-      <!-- Mobile Hamburger -->
-      <button class="hamburger" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <!-- Brand -->
+      <!-- Brand (updated to be a button trigger for quick-panel) -->
+      <button class="brand brand-panel-trigger" id="brand-panel-trigger" aria-haspopup="dialog" aria-expanded="false"
+        aria-controls="brand-panel">
+        <span class="logo-mark"><img src="./assets/logo.jpg" alt="logo" class="logo"></span>
+        <span class="brand-text"><strong>RS</strong> Constructions</span>
+        <img src="./assets/arrow-down.png" class="arrow-down">
       </button>
-    </div>
-  </div>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul>
-      <li><a href="./home.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-       <li>
-        <a class="mobile-link has-panel" href="./services.html" data-panel="services-panel">Services</a>
-      </li>
-      <li><a href="./projects.html">Projects</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a class="mobile-cta" href="./contact.html" style="background-color:#c9ff3a ;">GET IN TOUCH</a></li>
-    </ul>
-  </div>
-</header>
-<!-- SERVICES PANEL OVERLAY -->
-<div id="panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
-  <div id="services-panel" class="panel services-panel" role="dialog" aria-modal="true" aria-labelledby="services-panel-title">
-    <button class="panel-close" aria-label="Close services panel">✕</button>
-    <div class="panel-inner container">
-      <small class="pre">What we offer</small>
-      <h2 id="services-panel-title">Our Services</h2>
-      <p class="panel-lead">We deliver full-cycle construction services — from planning and design to handover. Pick a service to read a short summary.</p>
-      <div class="services-cards">
-        <article class="service-card-panel">
-          <div class="card-icon">🏗️</div>
-          <h3>Contract</h3>
-          <p>We build custom homes that blend local materials with modern engineering for lasting comfort and beauty.<p>
-          <a class="card-link" href="./contract.html">Read more →</a>
-        </article>
-        <article class="service-card-panel">
-          <div class="card-icon">🏢</div>
-          <h3>Consulting</h3>
-          <p>Office, retail and mixed-use developments delivered on schedule and with strict quality control.</p>
-          <a class="card-link" href="./consulting.html">Read more →</a>
-        </article>
-        <article class="service-card-panel">
-          <div class="card-icon">🛠️</div>
-          <h3>Promoters</h3>
-          <p>Upgrades, interiors and fit-outs that maximize space and modernize buildings while respecting budgets.</p>
-          <a class="card-link" href="./promoters.html">Read more →</a>
-        </article>
+      <!-- CENTER NAV (Desktop Only) -->
+      <nav class="nav-center" role="navigation" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="./home.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li>
+            <a class="nav-link has-panel" href="./services.html" data-panel="services-panel">Services <span
+                class="chev">▾</span></a>
+          </li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side Buttons -->
+      <div class="nav-right">
+        <a class="header-cta" href="./contact.html" id="header-cta">GET IN TOUCH</a>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <a class="mobile-link has-panel" href="./services.html" data-panel="services-panel">Services</a>
+        </li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a class="mobile-cta" href="./contact.html" style="background-color:#c9ff3a ;">GET IN TOUCH</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- SERVICES PANEL OVERLAY -->
+  <div id="panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+    <div id="services-panel" class="panel services-panel" role="dialog" aria-modal="true"
+      aria-labelledby="services-panel-title">
+      <button class="panel-close" aria-label="Close services panel">✕</button>
+      <div class="panel-inner container">
+        <small class="pre">What we offer</small>
+        <h2 id="services-panel-title">Our Services</h2>
+        <p class="panel-lead">We deliver full-cycle construction services — from planning and design to handover. Pick a
+          service to read a short summary.</p>
+        <div class="services-cards">
+          <article class="service-card-panel">
+            <div class="card-icon">🏗️</div>
+            <h3>Contract</h3>
+            <p>We build custom homes that blend local materials with modern engineering for lasting comfort and beauty.
+            <p>
+              <a class="card-link" href="./contract.html">Read more →</a>
+          </article>
+          <article class="service-card-panel">
+            <div class="card-icon">🏢</div>
+            <h3>Consulting</h3>
+            <p>Office, retail and mixed-use developments delivered on schedule and with strict quality control.</p>
+            <a class="card-link" href="./consulting.html">Read more →</a>
+          </article>
+          <article class="service-card-panel">
+            <div class="card-icon">🛠️</div>
+            <h3>Promoters</h3>
+            <p>Upgrades, interiors and fit-outs that maximize space and modernize buildings while respecting budgets.
+            </p>
+            <a class="card-link" href="./promoters.html">Read more →</a>
+          </article>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- BRAND QUICK PANEL OVERLAY -->
-<div id="brand-panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
-  <div id="brand-panel" class="panel brand-panel" role="dialog" aria-modal="true" aria-labelledby="brand-panel-title">
-    <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+  <!-- BRAND QUICK PANEL OVERLAY -->
+  <div id="brand-panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+    <div id="brand-panel" class="panel brand-panel" role="dialog" aria-modal="true" aria-labelledby="brand-panel-title">
+      <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
 
-    <div class="panel-inner container">
-      <h2 id="brand-panel-title">Choose a site / option</h2>
-      <p class="panel-lead">Select an option to view that site or summary. Background contents are dimmed while this panel is open.</p>
+      <div class="panel-inner container">
+        <h2 id="brand-panel-title">Choose a site / option</h2>
+        <p class="panel-lead">Select an option to view that site or summary. Background contents are dimmed while this
+          panel is open.</p>
 
-      <div class="brand-options">
-        <article class="brand-card">
-          <img src="/mnt/data/d3d758de-f413-4e3c-ac67-275b7f8cd61d.png" alt="Vangalamman Decors" class="brand-card-img">
-          <h3>Vangalamman Decors</h3>
-          <p>Decoration & events — traditional and modern decor solutions.</p>
-<a class="brand-card-cta" href="../vangalamman_decors/index.html" target="_blank" rel="noopener">Visit →</a>        </article>
+        <div class="brand-options">
+          <article class="brand-card">
+            <img src="./assets/vangalamman-decors.jpg" alt="Vangalamman Decors" class="brand-card-img">
+            <h3>Vangalamman Decors</h3>
+            <p>Decoration & events — traditional and modern decor solutions.</p>
+            <a class="brand-card-cta" href="../vangalamman_decors/index.html" target="_blank" rel="noopener">Visit →</a>
+          </article>
 
-        <article class="brand-card">
-          <img src="./assets/logo.jpg" alt="RS Constructions" class="brand-card-img">
-          <h3>RS Constructions</h3>
-          <p>This website — construction, projects, services and contact.</p>
-          <a class="brand-card-cta" href="./home.html">Visit →</a>
-        </article>
+          <article class="brand-card">
+            <img src="./assets/logo.jpg" alt="RS Constructions" class="brand-card-img">
+            <h3>RS Constructions</h3>
+            <p>This website — construction, projects, services and contact.</p>
+            <a class="brand-card-cta" href="./home.html">Visit →</a>
+          </article>
 
-        <article class="brand-card">
-          <img src="./assets/project-1.jpg" alt="Another Option" class="brand-card-img">
-          <h3>Another Option</h3>
-          <p>Third option — add your summary here.</p>
-          <a class="brand-card-cta" href="#">Visit →</a>
-        </article>
+          <article class="brand-card">
+            <img src="./assets/upvsc.png" alt="Another Option" class="brand-card-img">
+            <h3>vangalamman upvc solutions</h3>
+            <p>provides high-quality UPVC windows, doors, partitions, and fabrication services designed for durability.
+            </p>
+            <a class="brand-card-cta" href="../vangalamman_upvsc/index.html">Visit →</a>
+          </article>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<main>
-     <section class="hero" id="hero" aria-label="Hero">
+  <main>
+    <section class="hero" id="hero" aria-label="Hero">
       <div class="hero-bg-1" id="hero-bg" aria-hidden="true"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-inner container">
         <h1 class="hero-title">Building with Purpose<br>Backed by Trust</h1>
         <p class="hero-sub">
-            At Brikly, we don’t just build spaces — we build lasting relationships.        </p>
+          At Brikly, we don’t just build spaces — we build lasting relationships. </p>
       </div>
     </section>
     <!-- ABOUT / INTRO HERO-LIKE SECTION -->
-<section class="about-intro">
-  <div class="container about-intro-grid">
+    <section class="about-intro">
+      <div class="container about-intro-grid">
 
-    <!-- left: large headline -->
-    <div class="intro-head">
-      <h2 class="intro-title">
-        Built in Karur. Trusted<br>
-        Across the Region.
-      </h2>
-    </div>
-
-    <!-- right: lead paragraph -->
-    <div class="intro-copy">
-      <p class="lead">
-        At RS Constructions, we believe great building starts with trust and careful planning. With over 25 years of experience, we deliver residential and commercial projects with precision, safety and the highest standards of finish — creating spaces that stand the test of time.
-      </p>
-
-      <p class="lead small">
-        From initial design and permits through to construction and handover, our team manages every stage so clients have one reliable point of contact and predictable results.
-      </p>
-
-      <a class="btn-outline" href="./projects.html">View Projects</a>
-    </div>
-</div>
-</section>
-<!-- STATS MOSAIC -->
-<section class="stats-mosaic">
-  <div class="container">
-    <div class="mosaic-grid" role="list">
-
-      <!-- top-left: Projects stat -->
-      <article class="mosaic-item item-stats dark" role="listitem" aria-label="Projects">
-        <div class="mosaic-sublabel">PROJECTS</div>
-        <div class="mosaic-num">100+</div>
-        <p class="mosaic-desc">Completed over 100 residential and commercial projects with unmatched precision and professionalism.</p>
-      </article>
-
-      <!-- top-center: image -->
-      <div class="mosaic-item item-image image-center" role="listitem" aria-label="Showcase image 1"
-           style="background-image:url('./assets/mosaic1.jpg')"></div>
-
-      <!-- top-right: Happy clients -->
-      <article class="mosaic-item item-stats dark" role="listitem" aria-label="Happy clients">
-        <div class="mosaic-sublabel">HAPPY CLIENTS</div>
-        <div class="mosaic-num">80+</div>
-        <p class="mosaic-desc">We’ve earned the trust of homeowners and businesses through honest work, clear communication and quality builds.</p>
-      </article>
-
-      <!-- bottom-left: image -->
-      <div class="mosaic-item item-image image-left" role="listitem" aria-label="Showcase image 2"
-           style="background-image:url('./assets/mosaic2.jpg')"></div>
-
-      <!-- bottom-center: neon commitment -->
-      <article class="mosaic-item item-commit" role="listitem" aria-label="Commitment">
-        <div class="mosaic-sublabel">COMMITMENT</div>
-        <div class="mosaic-num big">110%</div>
-        <p class="mosaic-desc">We go above and beyond — with 110% dedication to your project, your goals, and your satisfaction from day one.</p>
-      </article>
-
-      <!-- bottom-right: image -->
-      <div class="mosaic-item item-image image-right" role="listitem" aria-label="Showcase image 3"
-           style="background-image:url('./assets/mosaic3.jpg')"></div>
-
-    </div>
-  </div>
-</section>
-<!-- VISION / MISSION / VALUES -->
-<section class="vmv-section">
-  <div class="container">
-    <div class="vmv-head">
-      <small class="pre">IMPACTFUL</small>
-      <h2 class="vmv-title">Vision, Mission &amp; Values</h2>
-    </div>
-
-    <div class="vmv-grid" role="list" aria-label="Vision mission values">
-      <!-- Card 1 -->
-      <article class="vmv-card" role="listitem" aria-label="Our Vision">
-        <div class="vmv-icon" aria-hidden="true">
-          <!-- target icon -->
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity="0.12"/>
-            <path d="M12 8a4 4 0 100 8 4 4 0 000-8z" fill="currentColor"/>
-            <circle cx="12" cy="12" r="2.2" fill="#06220a"/>
-          </svg>
+        <!-- left: large headline -->
+        <div class="intro-head">
+          <h2 class="intro-title">
+            Built in Karur. Trusted<br>
+            Across the Region.
+          </h2>
         </div>
-        <h3 class="vmv-title-small">Our Vision</h3>
-        <p class="vmv-text">We aim to create lasting spaces that strengthen communities and inspire confidence — built with care and purpose.</p>
-      </article>
 
-      <!-- Card 2 -->
-      <article class="vmv-card" role="listitem" aria-label="Our Mission">
-        <div class="vmv-icon" aria-hidden="true">
-          <!-- flag icon -->
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 20V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M6 6c3-1.5 5 0 8-1.5v11.5c-3 1.5-5 0-8 1.5V6z" fill="currentColor"/>
-          </svg>
+        <!-- right: lead paragraph -->
+        <div class="intro-copy">
+          <p class="lead">
+            At RS Constructions, we believe great building starts with trust and careful planning. With over 25 years of
+            experience, we deliver residential and commercial projects with precision, safety and the highest standards
+            of finish — creating spaces that stand the test of time.
+          </p>
+
+          <p class="lead small">
+            From initial design and permits through to construction and handover, our team manages every stage so
+            clients have one reliable point of contact and predictable results.
+          </p>
+
+          <a class="btn-outline" href="./projects.html">View Projects</a>
         </div>
-        <h3 class="vmv-title-small">Our Mission</h3>
-        <p class="vmv-text">We make construction simple and dependable through clear communication, skilled craftsmanship, and client-first service.</p>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="vmv-card" role="listitem" aria-label="Our Values">
-        <div class="vmv-icon" aria-hidden="true">
-          <!-- heart/hand icon -->
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21s-7-4.5-9-7c-1.2-1.6-.8-4.1 1-5.2 2-1.2 4.2.2 5 1.2.8-1 2.8-2.6 4.6-1.2 2 1.6 3.4 3.1 3.4 6 0 2.5-5 6.2-5 6.2z" fill="currentColor"/>
-          </svg>
-        </div>
-        <h3 class="vmv-title-small">Our Values</h3>
-        <p class="vmv-text">We build with integrity, treat every project like our own, and prioritize quality over shortcuts. We’re committed to doing it right.</p>
-      </article>
-    </div>
-  </div>
-</section>
-<!-- WHAT DRIVES US -->
-<section class="drives-section">
-  <div class="container drives-grid">
-    <div class="drives-media">
-      <img src="./assets/engineer.jpg" alt="site engineer at construction" class="drives-img">
-    </div>
-
-    <div class="drives-content">
-      <small class="pre">REAL FOUNDATION</small>
-      <h2 class="drives-title">What Drives Us</h2>
-      <p class="drives-lead">
-        We started RS Constructions to bring reliability back to construction. That means honest timelines, clear
-        communication, and work that holds up — inside and out. We partner with homeowners, businesses, and developers
-        who care about quality as much as we do.
-      </p>
-
-      <ul class="drives-list" aria-label="Key strengths">
-        <li><span class="check" aria-hidden="true">
-          <!-- check circle -->
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12"/>
-            <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        Licensed, insured, and ISO-certified professionals</li>
-
-        <li><span class="check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12"/>
-            <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        Customized build solutions</li>
-
-        <li><span class="check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12"/>
-            <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        Reliable timelines</li>
-
-        <li><span class="check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12"/>
-            <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        Clean & organized job sites</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section class="footer-cta" aria-labelledby="footer-cta-title">
-  <div class="container footer-cta-inner">
-    <div class="cta-left">
-      <small>READY TO START YOUR PROJECT?</small>
-      <h2 id="footer-cta-title">From Idea to Reality,<br>Let's Begin</h2>
-    </div>
-    <div class="cta-right">
-      <p class="cta-note">Your home should be more than a place to live — it should reflect your lifestyle, your values, and your dreams.</p>
-      <a href="./contact.html" class="cta-button">LET'S TALK</a>
-    </div>
-  </div>
-</section>
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
-    <!-- Brand & short -->
-    <div class="footer-col brand-col">
-     <h3 style="color: red;">RS Construction</h3>
-      <p>At RS, we are dedicated to delivering exceptional construction services that stand the test of time.</p>
-
-      <div class="socials">
-        <a href="#" aria-label="Facebook" class="social">🔗</a>
-        <a href="#" aria-label="Instagram" class="social">🔗</a>
-        <a href="#" aria-label="YouTube" class="social">🔗</a>
-        <a href="#" aria-label="X" class="social">🔗</a>
       </div>
-    </div>
+    </section>
+    <!-- STATS MOSAIC -->
+    <section class="stats-mosaic">
+      <div class="container">
+        <div class="mosaic-grid" role="list">
 
-    <!-- Company links -->
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul class="footer-links">
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
+          <!-- top-left: Projects stat -->
+          <article class="mosaic-item item-stats dark" role="listitem" aria-label="Projects">
+            <div class="mosaic-sublabel">PROJECTS</div>
+            <div class="mosaic-num">100+</div>
+            <p class="mosaic-desc">Completed over 100 residential and commercial projects with unmatched precision and
+              professionalism.</p>
+          </article>
 
-    <!-- Support links -->
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul class="footer-links">
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Testimonials</a></li>
-      </ul>
-    </div>
+          <!-- top-center: image -->
+          <div class="mosaic-item item-image image-center" role="listitem" aria-label="Showcase image 1"
+            style="background-image:url('./assets/mosaic1.jpg')"></div>
 
-    <!-- Contact -->
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <ul class="contact-list">
-        <li><strong>Call us</strong><br><a href="tel:+918004560000">+91 80045 60000</a></li>
-        <li><strong>Send Email</strong><br><a href="mailto:info@rsconstructions.com">info@rsconstructions.com</a></li>
-        <li><strong>Address</strong><br>123 Main St, Your City</li>
-      </ul>
-    </div>
-  </div>
+          <!-- top-right: Happy clients -->
+          <article class="mosaic-item item-stats dark" role="listitem" aria-label="Happy clients">
+            <div class="mosaic-sublabel">HAPPY CLIENTS</div>
+            <div class="mosaic-num">80+</div>
+            <p class="mosaic-desc">We’ve earned the trust of homeowners and businesses through honest work, clear
+              communication and quality builds.</p>
+          </article>
 
-  <div class="container footer-bottom">
-    <div class="copyright">© <span id="year-foot"></span> RS Constructions</div>
-    <div class="policy-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms &amp; Condition</a>
-    </div>
-  </div>
-</footer>
-</main>
+          <!-- bottom-left: image -->
+          <div class="mosaic-item item-image image-left" role="listitem" aria-label="Showcase image 2"
+            style="background-image:url('./assets/mosaic2.jpg')"></div>
+
+          <!-- bottom-center: neon commitment -->
+          <article class="mosaic-item item-commit" role="listitem" aria-label="Commitment">
+            <div class="mosaic-sublabel">COMMITMENT</div>
+            <div class="mosaic-num big">110%</div>
+            <p class="mosaic-desc">We go above and beyond — with 110% dedication to your project, your goals, and your
+              satisfaction from day one.</p>
+          </article>
+
+          <!-- bottom-right: image -->
+          <div class="mosaic-item item-image image-right" role="listitem" aria-label="Showcase image 3"
+            style="background-image:url('./assets/mosaic3.jpg')"></div>
+
+        </div>
+      </div>
+    </section>
+    <!-- VISION / MISSION / VALUES -->
+    <section class="vmv-section">
+      <div class="container">
+        <div class="vmv-head">
+          <small class="pre">IMPACTFUL</small>
+          <h2 class="vmv-title">Vision, Mission &amp; Values</h2>
+        </div>
+
+        <div class="vmv-grid" role="list" aria-label="Vision mission values">
+          <!-- Card 1 -->
+          <article class="vmv-card" role="listitem" aria-label="Our Vision">
+            <div class="vmv-icon" aria-hidden="true">
+              <!-- target icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" opacity="0.12" />
+                <path d="M12 8a4 4 0 100 8 4 4 0 000-8z" fill="currentColor" />
+                <circle cx="12" cy="12" r="2.2" fill="#06220a" />
+              </svg>
+            </div>
+            <h3 class="vmv-title-small">Our Vision</h3>
+            <p class="vmv-text">We aim to create lasting spaces that strengthen communities and inspire confidence —
+              built with care and purpose.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="vmv-card" role="listitem" aria-label="Our Mission">
+            <div class="vmv-icon" aria-hidden="true">
+              <!-- flag icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M6 6c3-1.5 5 0 8-1.5v11.5c-3 1.5-5 0-8 1.5V6z" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="vmv-title-small">Our Mission</h3>
+            <p class="vmv-text">We make construction simple and dependable through clear communication, skilled
+              craftsmanship, and client-first service.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="vmv-card" role="listitem" aria-label="Our Values">
+            <div class="vmv-icon" aria-hidden="true">
+              <!-- heart/hand icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 21s-7-4.5-9-7c-1.2-1.6-.8-4.1 1-5.2 2-1.2 4.2.2 5 1.2.8-1 2.8-2.6 4.6-1.2 2 1.6 3.4 3.1 3.4 6 0 2.5-5 6.2-5 6.2z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="vmv-title-small">Our Values</h3>
+            <p class="vmv-text">We build with integrity, treat every project like our own, and prioritize quality over
+              shortcuts. We’re committed to doing it right.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- WHAT DRIVES US -->
+    <section class="drives-section">
+      <div class="container drives-grid">
+        <div class="drives-media">
+          <img src="./assets/engineer.jpg" alt="site engineer at construction" class="drives-img">
+        </div>
+
+        <div class="drives-content">
+          <small class="pre">REAL FOUNDATION</small>
+          <h2 class="drives-title">What Drives Us</h2>
+          <p class="drives-lead">
+            We started RS Constructions to bring reliability back to construction. That means honest timelines, clear
+            communication, and work that holds up — inside and out. We partner with homeowners, businesses, and
+            developers
+            who care about quality as much as we do.
+          </p>
+
+          <ul class="drives-list" aria-label="Key strengths">
+            <li><span class="check" aria-hidden="true">
+                <!-- check circle -->
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12" />
+                  <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Licensed, insured, and ISO-certified professionals</li>
+
+            <li><span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12" />
+                  <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Customized build solutions</li>
+
+            <li><span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12" />
+                  <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Reliable timelines</li>
+
+            <li><span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4" opacity="0.12" />
+                  <path d="M9 12.5l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              Clean & organized job sites</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="footer-cta" aria-labelledby="footer-cta-title">
+      <div class="container footer-cta-inner">
+        <div class="cta-left">
+          <small>READY TO START YOUR PROJECT?</small>
+          <h2 id="footer-cta-title">From Idea to Reality,<br>Let's Begin</h2>
+        </div>
+        <div class="cta-right">
+          <p class="cta-note">Your home should be more than a place to live — it should reflect your lifestyle, your
+            values, and your dreams.</p>
+          <a href="./contact.html" class="cta-button">LET'S TALK</a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <!-- Brand & short -->
+        <div class="footer-col brand-col">
+          <h3 style="color: red;">RS Construction</h3>
+          <p>At RS, we are dedicated to delivering exceptional construction services that stand the test of time.</p>
+
+          <div class="socials">
+            <a href="#" aria-label="Facebook" class="social">🔗</a>
+            <a href="#" aria-label="Instagram" class="social">🔗</a>
+            <a href="#" aria-label="YouTube" class="social">🔗</a>
+            <a href="#" aria-label="X" class="social">🔗</a>
+          </div>
+        </div>
+
+        <!-- Company links -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Support links -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><strong>Call us</strong><br><a href="tel:+918004560000">+91 80045 60000</a></li>
+            <li><strong>Send Email</strong><br><a href="mailto:info@rsconstructions.com">info@rsconstructions.com</a>
+            </li>
+            <li><strong>Address</strong><br>123 Main St, Your City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div class="copyright">© <span id="year-foot"></span> RS Constructions</div>
+        <div class="policy-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Condition</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
 
-<script src="./script.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>

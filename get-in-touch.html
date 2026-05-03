@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch - Vangalamman Decors</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const brandTrigger = document.getElementById("brandTrigger");
+            const overlay = document.getElementById("brand-panel-overlay");
+            const closeBtn = document.getElementById("brand-panel-close");
+
+            if (!brandTrigger || !overlay) return;
+
+            // OPEN PANEL
+            function openPanel() {
+                overlay.removeAttribute("hidden");
+                document.body.style.overflow = "hidden";
+            }
+
+            // CLOSE PANEL
+            function closePanel() {
+                overlay.setAttribute("hidden", true);
+                document.body.style.overflow = "";
+            }
+
+            // Click logo/title/arrow
+            brandTrigger.addEventListener("click", openPanel);
+
+            // Close button
+            closeBtn.addEventListener("click", closePanel);
+
+            // Click outside panel
+            overlay.addEventListener("click", function (e) {
+                if (e.target === overlay) {
+                    closePanel();
+                }
+            });
+
+            // ESC key close
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closePanel();
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-wrapper" id="brandTrigger">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo">
+                    <h1 class="logo">Vangalamman Decors</h1>
+                    <button class="dropdown-toggle" id="dropdownToggle" aria-label="Toggle dropdown menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 7L10 10L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="get-in-touch.html" class="nav-link cta-link">Get In Touch</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div id="brand-panel-overlay" class="panel-overlay" hidden>
+
+        <div id="brand-panel" class="panel" role="dialog" aria-modal="true">
+
+            <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+
+            <div class="panel-inner container">
+                <h2>Choose a site / option</h2>
+                <p>Select an option to view that site or summary.</p>
+
+                <div class="brand-options">
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors"
+                                class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman Decors</h3>
+                        <p>Decoration & events solutions.</p>
+                        <a href="../vangalamman_decors/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/rsconstruction.jpg" alt="RS Constructions" class="brand-card-img">
+                        </div>
+                        <h3>RS Constructions</h3>
+                        <p>Construction projects.</p>
+                        <a href="../rsconstruction/home.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/upvsc.png" alt="UPVC Solutions" class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman UPVC Solutions</h3>
+                        <p>UPVC doors & windows.</p>
+                        <a href="../vangalamman_upvsc/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Start your design journey with us today</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Contact Information Display -->
+    <section class="touch-info-section">
+        <div class="container">
+            <div class="touch-intro">
+                <h2 class="section-title">Let's Create Something Beautiful Together</h2>
+                <p class="section-description">Whether you're planning a complete home makeover, office renovation, or
+                    custom furniture project, our team is here to help bring your vision to life.</p>
+            </div>
+            <div class="touch-info-cards">
+                <div class="touch-card">
+                    <div class="touch-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M8 12C8 10.6739 9.07394 9.6 10.4 9.6H14.8257C15.4099 9.6 15.9254 9.96729 16.1119 10.5117L17.9429 15.6763C18.1766 16.3454 17.9593 17.0875 17.3989 17.5151L15.134 19.222C16.3589 21.9216 18.5784 24.1411 21.278 25.366L22.9849 23.1011C23.4125 22.5407 24.1546 22.3234 24.8237 22.5571L29.9883 24.3881C30.5327 24.5746 30.9 25.0901 30.9 25.6743V30.1C30.9 31.4261 29.8261 32.5 28.5 32.5H26.9C16.4171 32.5 8 24.0829 8 13.6V12Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="touch-card-title">Call Us</h3>
+                    <p class="touch-card-detail">+91 98765 43210</p>
+                    <p class="touch-card-detail">+91 98765 43211</p>
+                </div>
+                <div class="touch-card">
+                    <div class="touch-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M6 12L16.95 19.25C18.2333 20.1417 19.7667 20.1417 21.05 19.25L32 12M9 32H31C33.2091 32 35 30.2091 35 28V12C35 9.79086 33.2091 8 31 8H9C6.79086 8 5 9.79086 5 12V28C5 30.2091 6.79086 32 9 32Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="touch-card-title">Email Us</h3>
+                    <p class="touch-card-detail">info@vangalamman.com</p>
+                    <p class="touch-card-detail">projects@vangalamman.com</p>
+                </div>
+                <div class="touch-card">
+                    <div class="touch-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path
+                                d="M20 22C22.2091 22 24 20.2091 24 18C24 15.7909 22.2091 14 20 14C17.7909 14 16 15.7909 16 18C16 20.2091 17.7909 22 20 22Z"
+                                stroke="#c9a961" stroke-width="2" />
+                            <path
+                                d="M20 34C20 34 32 25 32 18C32 11.3726 26.6274 6 20 6C13.3726 6 8 11.3726 8 18C8 25 20 34 20 34Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="touch-card-title">Visit Us</h3>
+                    <p class="touch-card-detail">123 Design Street</p>
+                    <p class="touch-card-detail">Chennai, TN 600001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Consultation Form -->
+    <section class="consultation-form-section">
+        <div class="container">
+            <div class="consultation-wrapper">
+                <div class="consultation-intro">
+                    <h2 class="form-title">Request a Free Consultation</h2>
+                    <p class="form-description">Share your project details and our design experts will reach out to
+                        schedule a personalized consultation</p>
+                    <div class="consultation-benefits">
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#c9a961" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="#c9a961" stroke-width="2" />
+                            </svg>
+                            <span>Free initial consultation</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#c9a961" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="#c9a961" stroke-width="2" />
+                            </svg>
+                            <span>Expert design advice</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#c9a961" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="#c9a961" stroke-width="2" />
+                            </svg>
+                            <span>Detailed project estimate</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="consultation-form" id="consultationForm" novalidate>
+                    <div class="form-group">
+                        <label for="consultName" class="form-label">Your Name *</label>
+                        <input type="text" id="consultName" name="consultName" class="form-input" required>
+                        <span class="form-error" id="consultNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultPhone" class="form-label">Phone Number *</label>
+                        <input type="tel" id="consultPhone" name="consultPhone" class="form-input" required>
+                        <span class="form-error" id="consultPhoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultEmail" class="form-label">Email Address</label>
+                        <input type="email" id="consultEmail" name="consultEmail" class="form-input">
+                        <span class="form-error" id="consultEmailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectType" class="form-label">Project Type</label>
+                        <select id="projectType" name="projectType" class="form-input">
+                            <option value="">Select project type</option>
+                            <option value="residential">Residential Interior</option>
+                            <option value="commercial">Commercial Space</option>
+                            <option value="furniture">Custom Furniture</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultMessage" class="form-label">Project Details *</label>
+                        <textarea id="consultMessage" name="consultMessage" class="form-textarea" rows="5"
+                            placeholder="Tell us about your project, timeline, and any specific requirements..."
+                            required></textarea>
+                        <span class="form-error" id="consultMessageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Request Consultation</button>
+                    <div class="form-success" id="consultFormSuccess">Thank you! We'll contact you within 24 hours to
+                        schedule your consultation.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Map / Location Placeholder -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2 class="section-title">Visit Our Design Studio</h2>
+                    <p class="section-description">Experience our design expertise firsthand at our Chennai studio.
+                        Browse material samples, view completed projects, and meet our design team.</p>
+                    <div class="location-details">
+                        <div class="location-detail-item">
+                            <strong>Address:</strong>
+                            <p>123 Design Street, Chennai, Tamil Nadu 600001</p>
+                        </div>
+                        <div class="location-detail-item">
+                            <strong>Hours:</strong>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By appointment only</p>
+                        </div>
+                        <div class="location-detail-item">
+                            <strong>Parking:</strong>
+                            <p>Free parking available on premises</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps?q=Vangalamman%20Decors%20Karur&output=embed" width="100%"
+                        height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Final Call-to-Action -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">Ready to Begin Your Design Journey?</h2>
+                <p class="final-cta-description">Our team of expert designers is excited to work with you. Let's
+                    transform your space into something extraordinary.</p>
+                <div class="final-cta-actions">
+                    <a href="tel:+919876543210" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M3 5C3 3.89543 3.89543 3 5 3H7.5C7.77614 3 8 3.22386 8 3.5V7.5C8 7.77614 7.77614 8 7.5 8H5C3.89543 8 3 7.10457 3 6V5Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        Call Now
+                    </a>
+                    <a href="mailto:info@vangalamman.com" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M3 6L10 11L17 6M4 15H16C17.1046 15 18 14.1046 18 13V7C18 5.89543 17.1046 5 16 5H4C2.89543 5 2 5.89543 2 7V13C2 14.1046 2.89543 15 4 15Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        Email Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo" class="footer-logo">
+                    <h3>Vangalamman Decors</h3>
+                    <p>Transforming spaces with elegance and precision</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Design Street<br>Chennai, Tamil Nadu 600001</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vangalamman Decors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

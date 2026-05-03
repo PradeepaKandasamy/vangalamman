@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vangalamman Decors</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const brandTrigger = document.getElementById("brandTrigger");
+            const overlay = document.getElementById("brand-panel-overlay");
+            const closeBtn = document.getElementById("brand-panel-close");
+
+            if (!brandTrigger || !overlay) return;
+
+            // OPEN PANEL
+            function openPanel() {
+                overlay.removeAttribute("hidden");
+                document.body.style.overflow = "hidden";
+            }
+
+            // CLOSE PANEL
+            function closePanel() {
+                overlay.setAttribute("hidden", true);
+                document.body.style.overflow = "";
+            }
+
+            // Click logo/title/arrow
+            brandTrigger.addEventListener("click", openPanel);
+
+            // Close button
+            closeBtn.addEventListener("click", closePanel);
+
+            // Click outside panel
+            overlay.addEventListener("click", function (e) {
+                if (e.target === overlay) {
+                    closePanel();
+                }
+            });
+
+            // ESC key close
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closePanel();
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar -->
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-wrapper" id="brandTrigger">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo">
+                    <h1 class="logo">Vangalamman Decors</h1>
+                    <button class="dropdown-toggle" id="dropdownToggle" aria-label="Toggle dropdown menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 7L10 10L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="get-in-touch.html" class="nav-link cta-link">Get In Touch</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div id="brand-panel-overlay" class="panel-overlay" hidden>
+
+        <div id="brand-panel" class="panel" role="dialog" aria-modal="true">
+
+            <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+
+            <div class="panel-inner container">
+                <h2>Choose a site / option</h2>
+                <p>Select an option to view that site or summary.</p>
+
+                <div class="brand-options">
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors"
+                                class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman Decors</h3>
+                        <p>Decoration & events solutions.</p>
+                        <a href="../vangalamman_decors/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/rsconstruction.jpg" alt="RS Constructions" class="brand-card-img">
+                        </div>
+                        <h3>RS Constructions</h3>
+                        <p>Construction projects.</p>
+                        <a href="../rsconstruction/home.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/upvsc.png" alt="UPVC Solutions" class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman UPVC Solutions</h3>
+                        <p>UPVC doors & windows.</p>
+                        <a href="../vangalamman_upvsc/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">How to Reach Us</h2>
+            </div>
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M10 15C10 13.3431 11.3431 12 13 12H18.5321C19.2623 12 19.9067 12.4591 20.1399 13.1396L22.4286 19.5954C22.7207 20.4318 22.4491 21.3594 21.7487 21.8939L18.9175 24.0275C20.4487 27.4020 23.0980 30.0513 26.4725 31.5825L28.6061 28.7513C29.1406 28.0509 30.0682 27.7793 30.9046 28.0714L37.3604 30.3601C38.0409 30.5933 38.5 31.2377 38.5 31.9679V37.5C38.5 39.1569 37.1569 40.5 35.5 40.5H33.5C20.5213 40.5 10 29.9787 10 17V15Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-title">Phone</h3>
+                    <p class="contact-info-detail">+91 98765 43210</p>
+                    <p class="contact-info-detail">+91 98765 43211</p>
+                    <p class="contact-info-note">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M8 15L21.1875 24.0625C22.2917 24.8021 23.7083 24.8021 24.8125 24.0625L38 15M12 38H36C38.2091 38 40 36.2091 40 34V16C40 13.7909 38.2091 12 36 12H12C9.79086 12 8 13.7909 8 16V34C8 36.2091 9.79086 38 12 38Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-title">Email</h3>
+                    <p class="contact-info-detail">info@vangalamman.com</p>
+                    <p class="contact-info-detail">projects@vangalamman.com</p>
+                    <p class="contact-info-note">We respond within 24 hours</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path
+                                d="M25 27C27.7614 27 30 24.7614 30 22C30 19.2386 27.7614 17 25 17C22.2386 17 20 19.2386 20 22C20 24.7614 22.2386 27 25 27Z"
+                                stroke="#c9a961" stroke-width="2" />
+                            <path
+                                d="M25 42C25 42 38 31 38 22C38 14.8203 32.1797 9 25 9C17.8203 9 12 14.8203 12 22C12 31 25 42 25 42Z"
+                                stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="contact-info-title">Office Address</h3>
+                    <p class="contact-info-detail">123 Design Street</p>
+                    <p class="contact-info-detail">Chennai, Tamil Nadu 600001</p>
+                    <p class="contact-info-note">Visit by appointment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-intro">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <p class="form-description">Fill out the form below and our team will get back to you shortly</p>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input">
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    <div class="form-success" id="formSuccess">Thank you! Your message has been sent successfully.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Find Us</span>
+                <h2 class="section-title">Our Location</h2>
+            </div>
+
+            <div class="map-embed">
+                <iframe src="https://www.google.com/maps?q=Vangalamman%20Decors%20Karur&output=embed" width="100%"
+                    height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 5: Call-to-Action / Footer Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content-box">
+                <h2 class="cta-title">Ready to Transform Your Space?</h2>
+                <p class="cta-description">Schedule a consultation with our design experts and let's discuss your
+                    project</p>
+                <a href="get-in-touch.html" class="btn btn-primary">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo" class="footer-logo">
+                    <h3>Vangalamman Decors</h3>
+                    <p>Transforming spaces with elegance and precision</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Design Street<br>Chennai, Tamil Nadu 600001</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vangalamman Decors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

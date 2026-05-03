@@ -1,126 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>contact-page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>contact-page</title>
 </head>
+
 <body>
- <header class="site-header" id="site-header" role="banner">
-  <div class="container header-inner">
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
 
-    <!-- Brand -->
-   <!-- Brand (updated to be a button trigger for quick-panel) -->
-    <button class="brand brand-panel-trigger" id="brand-panel-trigger" aria-haspopup="dialog" aria-expanded="false" aria-controls="brand-panel">
-      <span class="logo-mark"><img src="./assets/logo.jpg" alt="logo" class="logo"></span>
-      <span class="brand-text"><strong>RS</strong> Constructions</span>
-      <img src="./assets/arrow-down.png" class="arrow-down">
-    </button>
-
-    <!-- CENTER NAV (Desktop Only) -->
-    <nav class="nav-center" role="navigation" aria-label="Primary">
-      <ul class="nav-links">
-        <li><a class="nav-link active" href="./home.html">Home</a></li>
-        <li><a class="nav-link" href="./about.html">About</a></li>
-        <li>
-          <a class="nav-link has-panel" href="./services.html" data-panel="services-panel">Services <span class="chev">▾</span></a>
-        </li>          <li><a class="nav-link" href="./projects.html">Projects</a></li>
-        <li><a class="nav-link" href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Right Side Buttons -->
-    <div class="nav-right">
-      <a class="header-cta" href="./contact.html" id="header-cta">GET IN TOUCH</a>
-
-      <!-- Mobile Hamburger -->
-      <button class="hamburger" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <!-- Brand -->
+      <!-- Brand (updated to be a button trigger for quick-panel) -->
+      <button class="brand brand-panel-trigger" id="brand-panel-trigger" aria-haspopup="dialog" aria-expanded="false"
+        aria-controls="brand-panel">
+        <span class="logo-mark"><img src="./assets/logo.jpg" alt="logo" class="logo"></span>
+        <span class="brand-text"><strong>RS</strong> Constructions</span>
+        <img src="./assets/arrow-down.png" class="arrow-down">
       </button>
-    </div>
-  </div>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul>
-      <li><a href="./home.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-       <li>
-        <a class="mobile-link has-panel" href="./services.html" data-panel="services-panel">Services</a>
-      </li>
-      <li><a href="./projects.html">Projects</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a class="mobile-cta" href="./contact.html" style="background-color:#c9ff3a ;">GET IN TOUCH</a></li>
-    </ul>
-  </div>
-</header>
-<!-- SERVICES PANEL OVERLAY -->
-<div id="panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
-  <div id="services-panel" class="panel services-panel" role="dialog" aria-modal="true" aria-labelledby="services-panel-title">
-    <button class="panel-close" aria-label="Close services panel">✕</button>
-    <div class="panel-inner container">
-      <small class="pre">What we offer</small>
-      <h2 id="services-panel-title">Our Services</h2>
-      <p class="panel-lead">We deliver full-cycle construction services — from planning and design to handover. Pick a service to read a short summary.</p>
-      <div class="services-cards">
-        <article class="service-card-panel">
-          <div class="card-icon">🏗️</div>
-          <h3>Contract</h3>
-          <p>We build custom homes that blend local materials with modern engineering for lasting comfort and beauty.<p>
-          <a class="card-link" href="./contract.html">Read more →</a>
-        </article>
-        <article class="service-card-panel">
-          <div class="card-icon">🏢</div>
-          <h3>Consulting</h3>
-          <p>Office, retail and mixed-use developments delivered on schedule and with strict quality control.</p>
-          <a class="card-link" href="./consulting.html">Read more →</a>
-        </article>
-        <article class="service-card-panel">
-          <div class="card-icon">🛠️</div>
-          <h3>Promoters</h3>
-          <p>Upgrades, interiors and fit-outs that maximize space and modernize buildings while respecting budgets.</p>
-          <a class="card-link" href="./promoters.html">Read more →</a>
-        </article>
+      <!-- CENTER NAV (Desktop Only) -->
+      <nav class="nav-center" role="navigation" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="./home.html">Home</a></li>
+          <li><a class="nav-link" href="./about.html">About</a></li>
+          <li>
+            <a class="nav-link has-panel" href="./services.html" data-panel="services-panel">Services <span
+                class="chev">▾</span></a>
+          </li>
+          <li><a class="nav-link" href="./projects.html">Projects</a></li>
+          <li><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side Buttons -->
+      <div class="nav-right">
+        <a class="header-cta" href="./contact.html" id="header-cta">GET IN TOUCH</a>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <a class="mobile-link has-panel" href="./services.html" data-panel="services-panel">Services</a>
+        </li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a class="mobile-cta" href="./contact.html" style="background-color:#c9ff3a ;">GET IN TOUCH</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- SERVICES PANEL OVERLAY -->
+  <div id="panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+    <div id="services-panel" class="panel services-panel" role="dialog" aria-modal="true"
+      aria-labelledby="services-panel-title">
+      <button class="panel-close" aria-label="Close services panel">✕</button>
+      <div class="panel-inner container">
+        <small class="pre">What we offer</small>
+        <h2 id="services-panel-title">Our Services</h2>
+        <p class="panel-lead">We deliver full-cycle construction services — from planning and design to handover. Pick a
+          service to read a short summary.</p>
+        <div class="services-cards">
+          <article class="service-card-panel">
+            <div class="card-icon">🏗️</div>
+            <h3>Contract</h3>
+            <p>We build custom homes that blend local materials with modern engineering for lasting comfort and beauty.
+            <p>
+              <a class="card-link" href="./contract.html">Read more →</a>
+          </article>
+          <article class="service-card-panel">
+            <div class="card-icon">🏢</div>
+            <h3>Consulting</h3>
+            <p>Office, retail and mixed-use developments delivered on schedule and with strict quality control.</p>
+            <a class="card-link" href="./consulting.html">Read more →</a>
+          </article>
+          <article class="service-card-panel">
+            <div class="card-icon">🛠️</div>
+            <h3>Promoters</h3>
+            <p>Upgrades, interiors and fit-outs that maximize space and modernize buildings while respecting budgets.
+            </p>
+            <a class="card-link" href="./promoters.html">Read more →</a>
+          </article>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- BRAND QUICK PANEL OVERLAY -->
-<div id="brand-panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
-  <div id="brand-panel" class="panel brand-panel" role="dialog" aria-modal="true" aria-labelledby="brand-panel-title">
-    <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
+  <!-- BRAND QUICK PANEL OVERLAY -->
+  <div id="brand-panel-overlay" class="panel-overlay" aria-hidden="true" hidden>
+    <div id="brand-panel" class="panel brand-panel" role="dialog" aria-modal="true" aria-labelledby="brand-panel-title">
+      <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
 
-    <div class="panel-inner container">
-      <h2 id="brand-panel-title">Choose a site / option</h2>
-      <p class="panel-lead">Select an option to view that site or summary. Background contents are dimmed while this panel is open.</p>
+      <div class="panel-inner container">
+        <h2 id="brand-panel-title">Choose a site / option</h2>
+        <p class="panel-lead">Select an option to view that site or summary. Background contents are dimmed while this
+          panel is open.</p>
 
-      <div class="brand-options">
-        <article class="brand-card">
-          <img src="/mnt/data/d3d758de-f413-4e3c-ac67-275b7f8cd61d.png" alt="Vangalamman Decors" class="brand-card-img">
-          <h3>Vangalamman Decors</h3>
-          <p>Decoration & events — traditional and modern decor solutions.</p>
-<a class="brand-card-cta" href="../vangalamman_decors/index.html" target="_blank" rel="noopener">Visit →</a>        </article>
+        <div class="brand-options">
+          <article class="brand-card">
+            <img src="./assets/vangalamman-decors.jpg" alt="Vangalamman Decors" class="brand-card-img">
+            <h3>Vangalamman Decors</h3>
+            <p>Decoration & events — traditional and modern decor solutions.</p>
+            <a class="brand-card-cta" href="../vangalamman_decors/index.html" target="_blank" rel="noopener">Visit →</a>
+          </article>
 
-        <article class="brand-card">
-          <img src="./assets/logo.jpg" alt="RS Constructions" class="brand-card-img">
-          <h3>RS Constructions</h3>
-          <p>This website — construction, projects, services and contact.</p>
-          <a class="brand-card-cta" href="./home.html">Visit →</a>
-        </article>
+          <article class="brand-card">
+            <img src="./assets/logo.jpg" alt="RS Constructions" class="brand-card-img">
+            <h3>RS Constructions</h3>
+            <p>This website — construction, projects, services and contact.</p>
+            <a class="brand-card-cta" href="./home.html">Visit →</a>
+          </article>
 
-        <article class="brand-card">
-          <img src="./assets/project-1.jpg" alt="Another Option" class="brand-card-img">
-          <h3>Another Option</h3>
-          <p>Third option — add your summary here.</p>
-          <a class="brand-card-cta" href="#">Visit →</a>
-        </article>
+          <article class="brand-card">
+            <img src="./assets/upvsc.png" alt="Another Option" class="brand-card-img">
+            <h3>vangalamman upvc solutions</h3>
+            <p>provides high-quality UPVC windows, doors, partitions, and fabrication services designed for durability.
+            </p>
+            <a class="brand-card-cta" href="../vangalamman_upvsc/index.html">Visit →</a>
+          </article>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<main>
-     <section class="hero" id="hero" aria-label="Hero">
+  <main>
+    <section class="hero" id="hero" aria-label="Hero">
       <div class="hero-bg-3" id="hero-bg" aria-hidden="true"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -128,198 +140,198 @@
         <div class="badge">CONTACT</div>
         <h1 class="hero-title">Get in Touch with Brikly</h1>
         <p class="hero-sub">
-            Reach out today to schedule a free consultation.        </p>
+          Reach out today to schedule a free consultation. </p>
       </div>
     </section>
-<section class="contact-section">
-  <div class="container contact-grid">
+    <section class="contact-section">
+      <div class="container contact-grid">
 
-    <!-- LEFT CONTENT -->
-    <div class="contact-left">
-      <small class="pre">WE’RE HERE TO HELP</small>
-      <h2 class="contact-title">
-        Let’s Talk About <br> Your Next Build!
-      </h2>
-      <p class="contact-sub">
-        Fill out the form, give us a call, or stop by our office.  
-        Let’s start building something great together.
-      </p>
+        <!-- LEFT CONTENT -->
+        <div class="contact-left">
+          <small class="pre">WE’RE HERE TO HELP</small>
+          <h2 class="contact-title">
+            Let’s Talk About <br> Your Next Build!
+          </h2>
+          <p class="contact-sub">
+            Fill out the form, give us a call, or stop by our office.
+            Let’s start building something great together.
+          </p>
 
-      <div class="google-rating">
-        <img src="./assets/google-icon.png" alt="Google" class="g-icon">
-        <div>
-          <span class="stars">★★★★★</span><br>
-          <small>260+ reviews (4.95 of 5)</small>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT FORM -->
-    <div class="contact-card">
-      <form class="contact-form">
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name *</label>
-            <input type="text" required>
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text">
+          <div class="google-rating">
+            <img src="./assets/google-icon.png" alt="Google" class="g-icon">
+            <div>
+              <span class="stars">★★★★★</span><br>
+              <small>260+ reviews (4.95 of 5)</small>
+            </div>
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>Email *</label>
-            <input type="email" required>
+        <!-- RIGHT FORM -->
+        <div class="contact-card">
+          <form class="contact-form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" placeholder="+91" required>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>Your Message *</label>
+              <textarea required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">SUBMIT</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+    <!-- CONTACT INFO SECTION -->
+    <section class="contact-info-section">
+      <div class="container">
+
+        <small class="pre">WE ARE HERE</small>
+        <h2 class="contact-title">Find us on Google</h2>
+
+        <div class="contact-info-grid">
+
+          <!-- Address -->
+          <div class="info-box">
+            <div class="info-icon">📍</div>
+            <h4>Address</h4>
+            <p>No 50, Opposite to Dr.Rohini Ranjith Hospitals, Vaiyapuri Nagar, 4th Cross, Karur West,
+              Karur-639001, Tamil Nadu</p>
           </div>
-          <div class="form-group">
-            <label>Phone Number *</label>
-            <input type="tel" placeholder="+91" required>
+
+          <!-- Email -->
+          <div class="info-box">
+            <div class="info-icon">✉️</div>
+            <h4>Send Email</h4>
+            <p>vangalammandecors@gmail.com</p>
+          </div>
+
+          <!-- Phone -->
+          <div class="info-box">
+            <div class="info-icon">📞</div>
+            <h4>Call us</h4>
+            <p>+91 9443375677</p>
+          </div>
+
+          <!-- Social -->
+          <div class="info-box">
+            <div class="info-icon">📡</div>
+            <h4>Follow us</h4>
+            <p>
+              <a href="#">🌐</a>
+              <a href="#">📘</a>
+              <a href="#">📸</a>
+              <a href="#">🐦</a>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- GOOGLE MAP -->
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.5628782727396!2d78.06489117402344!3d10.957769889204764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa3670e8f82b8f%3A0x1e1e2d3e0b2d0d1a!2sDr.Rohini%20Ranjith%20Hospital!5e0!3m2!1sen!2sin!4v1700480000000!5m2!1sen!2sin"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="footer-cta" aria-labelledby="footer-cta-title">
+      <div class="container footer-cta-inner">
+        <div class="cta-left">
+          <small>READY TO START YOUR PROJECT?</small>
+          <h2 id="footer-cta-title">From Idea to Reality,<br>Let's Begin</h2>
+        </div>
+        <div class="cta-right">
+          <p class="cta-note">Your home should be more than a place to live — it should reflect your lifestyle, your
+            values, and your dreams.</p>
+          <a href="./contact.html" class="cta-button">LET'S TALK</a>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <!-- Brand & short -->
+        <div class="footer-col brand-col">
+          <h3 style="color: red;">RS Construction</h3>
+          <p>At RS, we are dedicated to delivering exceptional construction services that stand the test of time.</p>
+
+          <div class="socials">
+            <a href="#" aria-label="Facebook" class="social">🔗</a>
+            <a href="#" aria-label="Instagram" class="social">🔗</a>
+            <a href="#" aria-label="YouTube" class="social">🔗</a>
+            <a href="#" aria-label="X" class="social">🔗</a>
           </div>
         </div>
 
-        <div class="form-group full">
-          <label>Your Message *</label>
-          <textarea required></textarea>
+        <!-- Company links -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
         </div>
 
-        <button type="submit" class="submit-btn">SUBMIT</button>
-      </form>
-    </div>
+        <!-- Support links -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
 
-  </div>
-</section>
-<!-- CONTACT INFO SECTION -->
-<section class="contact-info-section">
-  <div class="container">
-    
-    <small class="pre">WE ARE HERE</small>
-    <h2 class="contact-title">Find us on Google</h2>
-
-    <div class="contact-info-grid">
-
-      <!-- Address -->
-      <div class="info-box">
-        <div class="info-icon">📍</div>
-        <h4>Address</h4>
-        <p>No 50, Opposite to  Dr.Rohini Ranjith Hospitals,  Vaiyapuri Nagar, 4th Cross, Karur West, Karur-639001, Tamil Nadu</p>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><strong>Call us</strong><br><a href="tel:+918004560000">+91 80045 60000</a></li>
+            <li><strong>Send Email</strong><br><a href="mailto:info@rsconstructions.com">info@rsconstructions.com</a>
+            </li>
+            <li><strong>Address</strong><br>123 Main St, Your City</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Email -->
-      <div class="info-box">
-        <div class="info-icon">✉️</div>
-        <h4>Send Email</h4>
-        <p>vangalammandecors@gmail.com</p>
+      <div class="container footer-bottom">
+        <div class="copyright">© <span id="year-foot"></span> RS Constructions</div>
+        <div class="policy-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Condition</a>
+        </div>
       </div>
-
-      <!-- Phone -->
-      <div class="info-box">
-        <div class="info-icon">📞</div>
-        <h4>Call us</h4>
-        <p>+91 9443375677</p>
-      </div>
-
-      <!-- Social -->
-      <div class="info-box">
-        <div class="info-icon">📡</div>
-        <h4>Follow us</h4>
-        <p>
-          <a href="#">🌐</a>
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
-        </p>
-      </div>
-
-    </div>
-
-    <!-- GOOGLE MAP -->
-    <div class="map-box">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.5628782727396!2d78.06489117402344!3d10.957769889204764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa3670e8f82b8f%3A0x1e1e2d3e0b2d0d1a!2sDr.Rohini%20Ranjith%20Hospital!5e0!3m2!1sen!2sin!4v1700480000000!5m2!1sen!2sin"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="footer-cta" aria-labelledby="footer-cta-title">
-  <div class="container footer-cta-inner">
-    <div class="cta-left">
-      <small>READY TO START YOUR PROJECT?</small>
-      <h2 id="footer-cta-title">From Idea to Reality,<br>Let's Begin</h2>
-    </div>
-    <div class="cta-right">
-      <p class="cta-note">Your home should be more than a place to live — it should reflect your lifestyle, your values, and your dreams.</p>
-      <a href="./contact.html" class="cta-button">LET'S TALK</a>
-    </div>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-inner">
-    <!-- Brand & short -->
-    <div class="footer-col brand-col">
-     <h3 style="color: red;">RS Construction</h3>
-      <p>At RS, we are dedicated to delivering exceptional construction services that stand the test of time.</p>
-
-      <div class="socials">
-        <a href="#" aria-label="Facebook" class="social">🔗</a>
-        <a href="#" aria-label="Instagram" class="social">🔗</a>
-        <a href="#" aria-label="YouTube" class="social">🔗</a>
-        <a href="#" aria-label="X" class="social">🔗</a>
-      </div>
-    </div>
-
-    <!-- Company links -->
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul class="footer-links">
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Support links -->
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul class="footer-links">
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Testimonials</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <ul class="contact-list">
-        <li><strong>Call us</strong><br><a href="tel:+918004560000">+91 80045 60000</a></li>
-        <li><strong>Send Email</strong><br><a href="mailto:info@rsconstructions.com">info@rsconstructions.com</a></li>
-        <li><strong>Address</strong><br>123 Main St, Your City</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container footer-bottom">
-    <div class="copyright">© <span id="year-foot"></span> RS Constructions</div>
-    <div class="policy-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms &amp; Condition</a>
-    </div>
-  </div>
-</footer>
-</main>
-<script src="./script.js"></script>
+    </footer>
+  </main>
+  <script src="./script.js"></script>
 </body>
+
 </html>

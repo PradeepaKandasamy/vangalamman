@@ -2,201 +2,344 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vangalamman Decors - Premium Interior & Decor Solutions</title>
+    <link rel="stylesheet" href="style.css">
 
-  <title>Choose Your Service</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+            const brandTrigger = document.getElementById("brandTrigger");
+            const overlay = document.getElementById("brand-panel-overlay");
+            const closeBtn = document.getElementById("brand-panel-close");
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+            if (!brandTrigger || !overlay) return;
 
-    /* Background */
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('./assets/bg.jpg') no-repeat center/cover;
-      position: relative;
-      overflow: hidden;
-      /* Prevent scrollbars if any */
-    }
+            // OPEN PANEL
+            function openPanel() {
+                overlay.removeAttribute("hidden");
+                document.body.style.overflow = "hidden";
+            }
 
-    /* Dark transparent overlay with premium gradient */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.7));
-      backdrop-filter: blur(3px);
-      /* Subtle blur for depth */
-      z-index: 1;
-    }
+            // CLOSE PANEL
+            function closePanel() {
+                overlay.setAttribute("hidden", true);
+                document.body.style.overflow = "";
+            }
 
-    /* Main container */
-    .container {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 1100px;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-      color: white;
-    }
+            // Click logo/title/arrow
+            brandTrigger.addEventListener("click", openPanel);
 
-    /* Title */
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
+            // Close button
+            closeBtn.addEventListener("click", closePanel);
 
-    .subtitle {
-      font-size: 14px;
-      opacity: 0.75;
-      margin-bottom: 35px;
-    }
+            // Click outside panel
+            overlay.addEventListener("click", function (e) {
+                if (e.target === overlay) {
+                    closePanel();
+                }
+            });
 
-    /* Cards */
-    .cards {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+            // ESC key close
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    closePanel();
+                }
+            });
 
-    /* Card */
-    .card {
-      width: 240px;
-      padding: 25px 18px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    /* Hover glow border */
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Logo */
-    .card img {
-      width: 75px;
-      height: 75px;
-      object-fit: contain;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      background: white;
-      padding: 6px;
-    }
-
-    /* Title */
-    .card h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
-    }
-
-    /* Description */
-    .card p {
-      font-size: 13px;
-      opacity: 0.8;
-    }
-
-    /* CTA effect */
-    .card::after {
-      content: "Open →";
-      display: block;
-      margin-top: 12px;
-      font-size: 13px;
-      color: #facc15;
-      opacity: 0;
-      transition: 0.3s;
-    }
-
-    .card:hover::after {
-      opacity: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container {
-        padding: 25px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .card {
-        width: 100%;
-      }
-    }
-  </style>
+        });
+    </script>
 </head>
 
 <body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-wrapper" id="brandTrigger">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo">
+                    <h1 class="logo">Vangalamman Decors</h1>
+                    <button class="dropdown-toggle" id="dropdownToggle" aria-label="Toggle dropdown menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 7L10 10L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-  <div class="container">
-    <h1>Choose Your Service</h1>
-    <p class="subtitle">Select a category to continue</p>
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="get-in-touch.html" class="nav-link cta-link">Get In Touch</a></li>
+            </ul>
 
-    <div class="cards">
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div id="brand-panel-overlay" class="panel-overlay" hidden>
 
-      <div class="card" onclick="goTo('decors')">
-        <img src="vangalamman-decors.jpg">
-        <h3>Vangalamman Decors</h3>
-        <p>Decoration & Event Services</p>
-      </div>
+        <div id="brand-panel" class="panel" role="dialog" aria-modal="true">
 
-      <div class="card" onclick="goTo('rs')">
-        <img src="rsconstruction.jpg">
-        <h3>RS Constructions</h3>
-        <p>Construction & Projects</p>
-      </div>
+            <button class="panel-close" id="brand-panel-close" aria-label="Close panel">✕</button>
 
-      <div class="card" onclick="goTo('upvc')">
-        <img src="upvsc.png">
-        <h3>Vangalamman UPVC</h3>
-        <p>Windows & Fabrication</p>
-      </div>
+            <div class="panel-inner container">
+                <h2>Choose a site / option</h2>
+                <p>Select an option to view that site or summary.</p>
 
+                <div class="brand-options">
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors" class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman Decors</h3>
+                        <p>Decoration & events solutions.</p>
+                        <a href="../vangalamman_decors/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/rsconstruction.jpg" alt="RS Constructions" class="brand-card-img">
+                        </div>
+                        <h3>RS Constructions</h3>
+                        <p>Construction projects.</p>
+                        <a href="../rsconstruction/home.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                    <article class="brand-card">
+                        <div class="brand-logo-container">
+                            <img src="assets/logo/upvsc.png" alt="UPVC Solutions" class="brand-card-img">
+                        </div>
+                        <h3>Vangalamman UPVC Solutions</h3>
+                        <p>UPVC doors & windows.</p>
+                        <a href="../vangalamman_upvsc/index.html" class="brand-card-cta">Visit →</a>
+                    </article>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    <!-- Section 1: Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-tagline">Transforming Spaces into Masterpieces</h2>
+            <p class="hero-description">Premium interior design and decor solutions that bring your vision to life with
+                elegance and sophistication</p>
+            <a href="get-in-touch.html" class="btn btn-primary">Start Your Project</a>
+        </div>
+    </section>
 
-  <script>
-    function goTo(type) {
-      if (type === 'decors') {
-        window.location.href = "./vangalamman_decors/index.html";
-      }
-      if (type === 'rs') {
-        window.location.href = "./rsconstruction/home.html";
-      }
-      if (type === 'upvc') {
-        window.location.href = "./vangalamman_upvsc/index.html";
-      }
-    }
-  </script>
+    <!-- Section 2: About Company Overview -->
+    <section class="about-overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Who We Are</span>
+                <h2 class="section-title">Crafting Excellence Since Day One</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Vangalamman Decors is a premier interior design and decoration company dedicated to creating
+                        stunning spaces that reflect your unique style and personality. With years of expertise in
+                        residential and commercial projects, we bring creativity, precision, and passion to every
+                        design.</p>
+                    <p>Our team of skilled professionals works closely with clients to understand their vision and
+                        deliver exceptional results that exceed expectations. From concept to completion, we ensure
+                        every detail is perfect.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <img src="assets/decor2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Section 3: Services Highlights -->
+    <section class="services-highlights">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-description">Comprehensive design and decor solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <rect x="10" y="15" width="30" height="25" stroke="#c9a961" stroke-width="2" fill="none" />
+                            <line x1="10" y1="25" x2="40" y2="25" stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Interior Design</h3>
+                    <p class="service-description">Complete interior design solutions for residential and commercial
+                        spaces with modern aesthetics</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <circle cx="25" cy="25" r="15" stroke="#c9a961" stroke-width="2" fill="none" />
+                            <path d="M25 15V25L32 32" stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Custom Furniture</h3>
+                    <p class="service-description">Bespoke furniture design and manufacturing to perfectly fit your
+                        space and style</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <rect x="12" y="12" width="26" height="26" stroke="#c9a961" stroke-width="2" fill="none" />
+                            <line x1="12" y1="20" x2="38" y2="20" stroke="#c9a961" stroke-width="2" />
+                            <line x1="20" y1="12" x2="20" y2="38" stroke="#c9a961" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Space Planning</h3>
+                    <p class="service-description">Strategic space optimization to maximize functionality and visual
+                        appeal</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path d="M15 35L25 20L35 35H15Z" stroke="#c9a961" stroke-width="2" fill="none" />
+                            <circle cx="25" cy="15" r="3" stroke="#c9a961" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Lighting Design</h3>
+                    <p class="service-description">Professional lighting solutions that enhance ambiance and highlight
+                        architectural features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Featured Projects Preview -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Explore our portfolio of stunning transformations</p>
+            </div>
+            <div class="projects-preview">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <img src="assets/modern-villa-design.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Modern Villa Interior</h3>
+                        <p class="project-category">Residential Design</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <img src="assets/modern-office-design.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Corporate Office Space</h3>
+                        <p class="project-category">Commercial Design</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <img src="assets/luxury-interior-design.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Luxury Apartment</h3>
+                        <p class="project-category">Residential Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Call-to-Action / Contact Teaser -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Space?</h2>
+                <p class="cta-description">Let's bring your vision to life with our expert design and decor services.
+                    Contact us today for a consultation.</p>
+                <div class="cta-buttons">
+                    <a href="get-in-touch.html" class="btn btn-primary">Get In Touch</a>
+                    <a href="projects.html" class="btn btn-outline">View Our Work</a>
+                </div>
+            </div>
+            <div class="cta-contact-info">
+                <div class="contact-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M3 8L10.89 13.26C11.5417 13.7213 12.4583 13.7213 13.11 13.26L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <span>info@vangalamman.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo/vangalamman-decors.jpg" alt="Vangalamman Decors Logo" class="footer-logo">
+                    <h3>Vangalamman Decors</h3>
+                    <p>Transforming spaces with elegance and precision</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Design Street<br>Chennai, Tamil Nadu 600001</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vangalamman Decors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
